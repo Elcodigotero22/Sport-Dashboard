@@ -1,0 +1,6 @@
+{"ts":"2025-09-08T03:52:55.145Z","method":"GET","url":"https://v3.football.api-sports.io/teams?league=135&season=2023","status":200,"duration_ms":380,"endpoint":"teams","league":"135","season":"2023"}
+{"ts":"2025-09-08T03:52:55.153Z","method":"GET","url":"https://v3.football.api-sports.io/standings?league=135&season=2023","status":200,"duration_ms":476,"endpoint":"standings","league":"135","season":"2023"}
+{"ts":"2025-09-08T03:52:55.336Z","method":"GET","url":"https://v3.football.api-sports.io/teams?league=135&season=2023","status":200,"duration_ms":177,"endpoint":"teams","league":"135","season":"2023"}
+{"ts":"2025-09-08T03:52:55.376Z","method":"GET","url":"https://v3.football.api-sports.io/standings?league=135&season=2023","status":200,"duration_ms":215,"endpoint":"standings","league":"135","season":"2023"}
+{"ts":"2025-09-08T03:52:55.387Z","method":"GET","url":"https://v3.football.api-sports.io/fixtures?league=135&season=2023","status":200,"duration_ms":619,"endpoint":"fixtures","league":"135","season":"2023"}
+{"ts":"2025-09-08T03:52:55.721Z","method":"GET","url":"https://v3.football.api-sports.io/fixtures?league=135&season=2023","status":200,"duration_ms":324,"endpoint":"fixtures","league":"135","season":"2023"}

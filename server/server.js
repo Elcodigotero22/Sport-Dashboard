@@ -32,6 +32,7 @@ app.get('/api/proxy', async (req, res) => {
         return res.status(400).json({ error: 'Invalid endpoint' });
     }
 
+    const start = Date.now();
     try {
         const baseUrl = 'https://v3.football.api-sports.io';
         const url = `${baseUrl}/${endpoint}?league=${league}&season=${season}`;
@@ -45,11 +46,38 @@ app.get('/api/proxy', async (req, res) => {
 
         if (r.ok) {
             const data = await r.json();
+
+            // Registrar la solicitud
+            const logEntry = {
+                ts: new Date().toISOString(),
+                method: 'GET',
+                url: url,
+                status: r.status,
+                duration_ms: Date.now() - start,
+                endpoint: endpoint,
+                league: league || 'none',
+                season: season || 'none'
+            };
+
+            logRequest(logEntry);
             res.json(data);
         } else {
             throw new Error(`API error: ${r.status}`);
         }
     } catch (error) {
+        const logEntry = {
+            ts: new Date().toISOString(),
+            method: 'GET',
+            url: url,
+            error: error.message,
+            duration_ms: Date.now() - start,
+            endpoint: endpoint,
+            league: league || 'none',
+            season: season || 'none'
+        };
+
+        logRequest(logEntry);
+
         console.error('Proxy error:', error);
         res.status(500).json({
             error: 'Failed to fetch data',
