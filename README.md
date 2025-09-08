@@ -1,4 +1,4 @@
-Análisis de Fútbol - Dashboard
+# Análisis de Fútbol - Dashboard
 Un panel interactivo para visualizar estadísticas y análisis de fútbol en tiempo real, con caching inteligente y transformaciones de datos avanzadas.
 
 Fuente de Datos
@@ -7,9 +7,13 @@ Endpoint: https://v3.football.api-sports.io/
 Plan: Free tier (100 requests por día)
 
 Endpoints Utilizados:
+
 GET /teams - Información de equipos
+
 GET /standings - Tabla de posiciones
+
 GET /fixtures - Partidos y resultados
+
 GET /fixtures/events - Eventos de partidos
 
 Datos Mock (Respaldo):
@@ -21,14 +25,14 @@ npm run server -> Iniciar Backend
 
 Variables de Entorno
 Crear un archivo .env en la raíz del proyecto:
-# Configuración de API Sports
+
 API_SPORTS_KEY=tu_api_key_aqui
-# Configuración del Servidor
+
 PORT=3001
 
 Archivo .env.example incluido como referencia.
 
-Transformaciones Implementadas
+# Transformaciones Implementadas
 1. Unión entre Endpoints
 Fórmula: Combinación de datos de equipos, standings y fixtures
 // Unión de datos de múltiples endpoints
@@ -69,7 +73,7 @@ Unificación de nombres de equipos
 Conversión de tipos de datos
 Manejo de valores nulos/undefined
 
-Decisiones de Diseño y Trade-offs
+# Decisiones de Diseño y Trade-offs
 Arquitectura:
 Frontend/Backend separados - Mejor escalabilidad pero mayor complejidad
 Caching en localStorage - Reduce llamadas a API pero requiere gestión de expiración
@@ -87,7 +91,7 @@ Cache por 12 horas - Balance entre datos frescos y limitaciones de API
 Trade-offs Aceptados:
 Latencia vs Freshness: Cache de 12 horas para evitar rate limits (derivado de la recomendación del proveedor - 1 request/día)
 
-Flujo de Datos
+# Flujo de Datos
 Fetch: Obtención de datos de API o cache
 Transform: Aplicación de transformaciones
 Cache: Almacenamiento en localStorage
@@ -114,4 +118,4 @@ Storage: localStorage API
 Styling: CSS3 con variables custom
 Build Tool: Vite
 
-Nota: Este proyecto requiere una API key gratuita de API-Sports. 
+# Nota: Este proyecto requiere una API key gratuita de API-Sports. 
