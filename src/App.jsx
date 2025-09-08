@@ -120,31 +120,31 @@ function App() {
             isDataCached={isAnyCached}
           />
 
-          <div class="transformations-info">
+          <div className="transformations-info">
             <h3>📊 Características de Analíticas</h3>
-            <div class="features-grid">
-              <div class="feature-item">
-                <span class="feature-icon">🔗</span>
+            <div className="features-grid">
+              <div className="feature-item">
+                <span className="feature-icon">🔗</span>
                 <span>Integración de Datos</span>
               </div>
-              <div class="feature-item">
-                <span class="feature-icon">📈</span>
+              <div className="feature-item">
+                <span className="feature-icon">📈</span>
                 <span>Métricas de Rendimiento</span>
               </div>
-              <div class="feature-item">
-                <span class="feature-icon">⏰</span>
+              <div className="feature-item">
+                <span className="feature-icon">⏰</span>
                 <span>Análisis Temporal</span>
               </div>
-              <div class="feature-item">
-                <span class="feature-icon">🏆</span>
+              <div className="feature-item">
+                <span className="feature-icon">🏆</span>
                 <span>Clasificaciones Principales</span>
               </div>
-              <div class="feature-item">
-                <span class="feature-icon">📊</span>
+              <div className="feature-item">
+                <span className="feature-icon">📊</span>
                 <span>Medias Móviles</span>
               </div>
-              <div class="feature-item">
-                <span class="feature-icon">💾</span>
+              <div className="feature-item">
+                <span className="feature-icon">💾</span>
                 <span>Almacenamiento en Caché Inteligente</span>
               </div>
             </div>

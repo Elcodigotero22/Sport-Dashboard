@@ -32,11 +32,10 @@ app.get('/api/proxy', async (req, res) => {
         return res.status(400).json({ error: 'Invalid endpoint' });
     }
 
+    const baseUrl = 'https://v3.football.api-sports.io';
+    const url = `${baseUrl}/${endpoint}?league=${league}&season=${season}`;
     const start = Date.now();
     try {
-        const baseUrl = 'https://v3.football.api-sports.io';
-        const url = `${baseUrl}/${endpoint}?league=${league}&season=${season}`;
-
         const r = await fetch(url, {
             headers: {
                 'x-rapidapi-key': process.env.API_SPORTS_KEY || '',
